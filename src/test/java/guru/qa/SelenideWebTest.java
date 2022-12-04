@@ -31,7 +31,7 @@ public class SelenideWebTest {
         );
     }
 
-    @MethodSource
+    @MethodSource("selenideButtonsTest")
     @ParameterizedTest(name = "Проверка наличия кнопок из списка {1} на сайте селенида в локали {0}")
        @Tag("BLOCKER")
     void selenideButtonsTest(String locale, List<String> buttons) {
