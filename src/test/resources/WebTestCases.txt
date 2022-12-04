@@ -22,7 +22,7 @@ BLOCKER
 ['EN', List{Quick start Docs FAQ Blog Javadoc Users Quotes}]
 
 1 - Заголовок
-"Проверка наличия кнопок из списка test_data[1] на сайте селенида в локали test_data[0]
+"Проверка наличия кнопок из списка test_data[1] на сайте селенида в локали test_data[0]"
 2 - Критичность
 BLOCKER
 3 - Предусловия

@@ -3,12 +3,12 @@ package guru.qa;
 import com.codeborne.selenide.CollectionCondition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvSource;
+
 import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.ValueSource;
+
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -24,8 +24,7 @@ public class SelenideWebTest {
         open("https://selenide.org");
     }
 
-    static Stream<Arguments> selenideButtonsTest(){
-
+    static Stream<Arguments> selenideButtonsTest() {
         return Stream.of(
                 Arguments.of("RU", List.of("С чего начать?", "Док", "ЧАВО", "Блог", "Javadoc", "Пользователи", "Отзывы")),
                 Arguments.of("EN", List.of("Quick start", "Docs", "FAQ", "Blog", "Javadoc", "Users", "Quotes"))
