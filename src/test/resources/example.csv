@@ -1,0 +1,3 @@
+searchQuery, expectedUrl
+selenide,    https://selenide.org
+junit5,      https://junit.org
