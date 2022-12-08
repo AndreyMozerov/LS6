@@ -1,5 +1,5 @@
 plugins {
-    id 'java-library'
+    id 'java'
 }
 
 group 'org.example'
@@ -11,14 +11,14 @@ repositories {
 
 dependencies {
     testImplementation ('org.junit.jupiter:junit-jupiter:5.9.0',
-            'com.codeborne:selenide:6.10.1',
-            'org.slf4j:slf4j-simple:2.0.5')
+                        'com.codeborne:selenide:6.10.1',
+                        'org.slf4j:slf4j-simple:2.0.5')
 
 }
 
 test {
     useJUnitPlatform()
 }
-tasks.withType(JavaTestCompile) {
+tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
