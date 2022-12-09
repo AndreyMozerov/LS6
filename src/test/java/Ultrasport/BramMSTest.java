@@ -1,4 +1,4 @@
-package Bramtech;
+package Ultrasport;
 
 import com.codeborne.selenide.CollectionCondition;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,7 +18,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class BramMSTest {
 
     @BeforeEach
-    void setUp() {
+    void setUp1() {
         open("https://selenide.org/");
     }
 
