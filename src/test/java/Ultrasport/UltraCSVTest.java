@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class BramCSVTest {
+public class UltraCSVTest {
 
     @BeforeEach
     void setUp1() {

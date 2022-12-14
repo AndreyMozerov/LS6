@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class UVSTest {
+public class UltraVSTest {
 
     @BeforeAll
     static void setUp() {
