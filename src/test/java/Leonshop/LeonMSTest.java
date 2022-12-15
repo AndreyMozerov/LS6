@@ -1,4 +1,4 @@
-package Ultrasport;
+package Leonshop;
 
 import com.codeborne.selenide.CollectionCondition;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class UltraMSTest {
+public class LeonMSTest {
 
     @BeforeEach
     void setUp1() {

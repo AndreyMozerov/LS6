@@ -1,4 +1,4 @@
-package Ultrasport;
+package Leonshop;
 
 import com.codeborne.selenide.CollectionCondition;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class UltraCSVTest {
+public class LeonCSVTest {
 
     @BeforeEach
     void setUp1() {
