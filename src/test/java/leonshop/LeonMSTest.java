@@ -20,9 +20,9 @@ public class LeonMSTest {
 
     @BeforeEach
     void setUp1() {
-
-        open("https://leon-shop.ru/");
         Configuration.browserSize = "1920x1080";
+        open("http://leon-shop.ru/");
+
     }
 
 

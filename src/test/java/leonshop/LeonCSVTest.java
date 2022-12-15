@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -32,6 +33,10 @@ public class LeonCSVTest {
         $("[name=q]").setValue(searchQuery).pressEnter();
         $("[id=search]").shouldHave(text(expectedUrl));
         $$("[id=search]").should(CollectionCondition.size(resultCount));
+
+      //  $$(".toolbar_game").find(text(locale)).click();
+        $(".selectedTxt").click();
+     //   $$(".newList").shouldHave(texts(buttons));
        // $(".newList").shouldHave(text(inventory));
         $(".home_selbtn").click();
     }

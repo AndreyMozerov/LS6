@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 
 import static com.codeborne.selenide.Selenide.open;
-@Disabled
+    /*
 public class LeonTestBase {
 
     @BeforeAll
@@ -14,3 +14,4 @@ public class LeonTestBase {
         open("http://leon-shop.ru/");
     }
 }
+*/
