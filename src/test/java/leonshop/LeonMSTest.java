@@ -1,7 +1,5 @@
 package leonshop;
 
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,19 +11,14 @@ import java.util.stream.Stream;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
-public class LeonMSTest {
+public class LeonMSTest extends LeonTestBase {
 
     @BeforeEach
-    void setUp1() {
-        Configuration.browserSize = "1920x1080";
+    void setUp2() {
         open("http://leon-shop.ru/");
-
-    }
-
-
+   }
     static Stream<Arguments> gamerButtonsTest() {
         return Stream.of(
                 Arguments.of("Игрок", List.of("Коньки", "Клюшка", "Защита", "Суммки", "Аксессуары",
@@ -35,11 +28,10 @@ public class LeonMSTest {
                         "Сумки вратаря", "Аксессуары вратаря", "Одежда", "Сувениры", "Подарочный сертификат"))
         );
     }
-
     @MethodSource("gamerButtonsTest")
     @ParameterizedTest(name = "Проверка наличия кнопок из списка {1} на сайте leon-shop в локали {0}")
     @Tag("BLOCKER")
-    void selenideButtonsTest(String locale, List<String> buttons) {
+    void gamerButtonsTest(String locale, List<String> buttons) {
         $$(".toolbar_game").find(text(locale)).click();
         $(".selectedTxt").click();
         $$(".newList").shouldHave(texts(buttons));
