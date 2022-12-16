@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class LeonMSTest extends LeonTestBase {
@@ -21,9 +21,9 @@ public class LeonMSTest extends LeonTestBase {
    }
     static Stream<Arguments> gamerButtonsTest() {
         return Stream.of(
-                Arguments.of("Игрок", List.of("Коньки", "Клюшка", "Защита", "Суммки", "Аксессуары",
+                Arguments.of("Игрок", List.of("Коньки", "Клюшки", "Защита", "Сумки", "Аксессуары",
                         "Одежда", "Для фигуристов", "Стрит-хоккей", "Экипировка судьи", "Сувениры", "Станки",
-                        "Подарочные сертификаты", "Футбол", "Флорбол")),
+                        "Подарочный сертификат", "ФУТБОЛ", "Флорбол")),
                 Arguments.of("Вратарь", List.of("Коньки вратаря", "Клюшки вратаря", "Защита вратаря",
                         "Сумки вратаря", "Аксессуары вратаря", "Одежда", "Сувениры", "Подарочный сертификат"))
         );
@@ -31,9 +31,9 @@ public class LeonMSTest extends LeonTestBase {
     @MethodSource("gamerButtonsTest")
     @ParameterizedTest(name = "Проверка наличия кнопок из списка {1} на сайте leon-shop в локали {0}")
     @Tag("BLOCKER")
-    void gamerButtonsTest(String locale, List<String> buttons) {
-        $$(".toolbar_game").find(text(locale)).click();
+    void gamerButtonsTest(String gamer, List<String> buttons) {
+        $(".toolbar_game").$(byText(gamer)).click();
         $(".selectedTxt").click();
-        $$(".newList").shouldHave(texts(buttons));
+        $(".newList").$$("li").shouldHave(texts(buttons));
     }
 }
