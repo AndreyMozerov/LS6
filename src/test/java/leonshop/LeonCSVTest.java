@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class LeonCSVTest extends LeonTestBase {
@@ -25,7 +26,7 @@ public class LeonCSVTest extends LeonTestBase {
             "в категории {0}")
     @Tags({@Tag("BLOCKER"), @Tag("FEATURE")})
     void leonSearchTest(String a, String b) {
-        $$(".nav").find(text(a)).click();
+        $("#nav").$(byText(a)).click();
         $(".price").shouldHave(text(b));
     }
 }
